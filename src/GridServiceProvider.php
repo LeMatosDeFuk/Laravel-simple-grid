@@ -18,16 +18,6 @@ class GridServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'LeMatosDeFuk');
 
-        $this->loadPackageAssets();
-    }
-
-    /**
-     * Load package assets
-     *
-     * @return void
-     */
-    public function loadPackageAssets(): void
-    {
         $this->publishes([
                              __DIR__ . '/../resources/views' => base_path('resources/views/vendor/LeMatosDeFuk')
                          ], 'views');
