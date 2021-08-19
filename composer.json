@@ -12,15 +12,21 @@
     "minimum-stability": "dev",
     "require": {
         "livewire/livewire": "^2.4",
-        "php": ">=8.0.9"
-    }
-    ,
+        "php": "^8.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LeMatosDeFuk\\GridServiceProvider"
+            ]
+        }
+    },
     "require-dev": {
         "roave/security-advisories": "dev-latest"
     },
     "autoload": {
-        "psr-0": {
-            "LeMatosDeFuk": "src/"
+        "psr-4": {
+            "LeMatosDeFuk\\": "src/"
         }
     }
 }
