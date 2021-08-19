@@ -19,8 +19,8 @@ class GridServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'LeMatosDeFuk');
 
         $this->publishes([
-                             __DIR__ . '/../resources/views' => base_path('resources/views/vendor/LeMatosDeFuk')
-                         ], 'views');
+                             __DIR__.'/../resources/views' => resource_path('views/vendor/LeMatosDeFuk'),
+                         ]);
     }
 
 }
