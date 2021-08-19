@@ -16,11 +16,11 @@ class GridServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'LeMatosDeFuk');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'lematosdefuk');
 
         $this->publishes([
-                             __DIR__.'/../resources/views' => resource_path('views/vendor/LeMatosDeFuk'),
-                         ]);
+                             __DIR__.'/../resources/views' => resource_path('views/vendor/lematosdefuk'),
+                         ], 'lematosdefuk-views');
     }
 
 }

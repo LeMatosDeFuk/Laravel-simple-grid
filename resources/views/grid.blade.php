@@ -1,8 +1,8 @@
 <div>
-    @include('components.grid-for-page')
+    @include('lematosdefuk::grid-for-page')
 
     <div class="px-4">
-        @include('components.notification', ['message' => __('Record has been deleted')])
+        @include('lematosdefuk::notification', ['message' => __('Record has been deleted')])
     </div>
 
     <div class="row">
@@ -118,7 +118,7 @@
         </div>
     </div>
 
-    {{ $grid->getModels()->links('components.pagination') }}
+    {{ $grid->getModels()->links('lematosdefuk::pagination') }}
 </div>
 
 @push('scripts')
