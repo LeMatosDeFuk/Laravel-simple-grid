@@ -1,0 +1,23 @@
+{
+    "name": "lematosdefuk/laravel-simple-grid",
+    "description": "Simple grid for laravel",
+    "type": "grid-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matěj Černý",
+            "email": "me@cernymatej.cz"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "AgusRdzGitHub": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    }
+}
