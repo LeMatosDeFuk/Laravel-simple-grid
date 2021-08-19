@@ -9,5 +9,18 @@
             "email": "me@cernymatej.cz"
         }
     ],
-    "require": {}
+    "minimum-stability": "dev",
+    "require": {
+        "livewire/livewire": "^2.4",
+        "php": ">=8.0.9"
+    }
+    ,
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    },
+    "autoload": {
+        "psr-0": {
+            "HelloWorld": "src/"
+        }
+    }
 }
