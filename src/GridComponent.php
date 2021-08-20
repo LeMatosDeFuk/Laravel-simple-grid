@@ -2,6 +2,7 @@
 
 namespace LeMatosDeFuk;
 
+use Illuminate\Database\Eloquent\Builder;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -9,9 +10,9 @@ interface GridInterface
 {
     public function render();
 
-    public function createGrid();
+    public function createGrid(): Grid;
 
-    public function filterData();
+    public function filterData(): Builder;
 
 }
 

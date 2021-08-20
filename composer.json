@@ -19,7 +19,7 @@
             "providers": [
                 "LeMatosDeFuk\\GridServiceProvider"
             ]
-        }
+        },
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest"
