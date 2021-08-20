@@ -1,6 +1,6 @@
 <?php
 
-namespace LeMatosDeFuk;
+namespace LeMatosDeFuk\LaravelSimpleGrid\Notifications;
 
 use Livewire\Component;
 
@@ -26,7 +26,7 @@ class Delete extends Component
 
     public function render()
     {
-        return view('lematosdefuk::notifications.delete');
+        return view('lematosdefuk-simple-grid::notifications.delete');
     }
 
 }

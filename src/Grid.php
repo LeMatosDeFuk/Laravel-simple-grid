@@ -1,6 +1,6 @@
 <?php
 
-namespace LeMatosDeFuk;
+namespace LeMatosDeFuk\LaravelSimpleGrid;
 
 use Illuminate\Support\Collection;
 

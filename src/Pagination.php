@@ -1,6 +1,6 @@
 <?php
 
-namespace LeMatosDeFuk;
+namespace LeMatosDeFuk\LaravelSimpleGrid;
 
 use Illuminate\View\Component;
 use Illuminate\View\View;
@@ -26,6 +26,6 @@ class Pagination extends Component
      */
     public function render()
     {
-        return view('lematosdefuk::pagination');
+        return view('lematosdefuk-simple-grid::pagination');
     }
 }
