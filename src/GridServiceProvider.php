@@ -3,6 +3,7 @@
 namespace LeMatosDeFuk;
 
 use Illuminate\Support\ServiceProvider;
+use Livewire\Livewire;
 
 /**
  * @author Matěj Černý <me@cernymatej.cz>
@@ -21,6 +22,8 @@ class GridServiceProvider extends ServiceProvider
         $this->publishes([
                              __DIR__.'/../resources/views' => resource_path('views/vendor/lematosdefuk'),
                          ], 'lematosdefuk-views');
+
+        Livewire::component('lematosdefuk::delete', Delete::class);
     }
 
 }
