@@ -26,6 +26,6 @@ class Pagination extends Component
      */
     public function render()
     {
-        return view('lematosdefuk-simple-grid::pagination');
+        return view('lematosdefuk::pagination');
     }
 }

@@ -1,8 +1,8 @@
 <div>
-    @include('lematosdefuk-simple-grid::grid-for-page')
+    @include('lematosdefuk::grid-for-page')
 
     <div class="px-4">
-        @include('lematosdefuk-simple-grid::notification', ['message' => __('Record has been deleted')])
+        @include('lematosdefuk::notification', ['message' => __('Record has been deleted')])
     </div>
 
     <div class="row">
@@ -96,7 +96,7 @@
                                                 <i class="fas fa-user-edit text-secondary"></i>
                                             </a>
                                             <a class="mx-1"
-                                               wire:click="$emit('showModal', 'lematosdefuk-simple-grid::delete', {{ $model->getId() }}, '{{ urlencode($model::class) }}')"
+                                               wire:click="$emit('showModal', 'lematosdefuk::delete', {{ $model->getId() }}, '{{ urlencode($model::class) }}')"
                                                data-bs-toggle="modal" data-bs-target="#modal-notification">
                                                 <i class="cursor-pointer fas fa-trash text-secondary"></i>
                                             </a>
@@ -118,7 +118,7 @@
         </div>
     </div>
 
-    {{ $grid->getModels()->links('lematosdefuk-simple-grid::pagination') }}
+    {{ $grid->getModels()->links('lematosdefuk::pagination') }}
 </div>
 
 @push('scripts')

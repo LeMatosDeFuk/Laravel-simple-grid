@@ -26,7 +26,7 @@ class Delete extends Component
 
     public function render()
     {
-        return view('lematosdefuk-simple-grid::notifications.delete');
+        return view('lematosdefuk::notifications.delete');
     }
 
 }
