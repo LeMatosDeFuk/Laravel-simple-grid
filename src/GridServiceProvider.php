@@ -1,8 +1,9 @@
 <?php
 
-namespace LeMatosDeFuk;
+namespace LeMatosDeFuk\LaravelSimpleGrid;
 
 use Illuminate\Support\ServiceProvider;
+use LeMatosDeFuk\LaravelSimpleGrid\Notifications\Delete;
 use Livewire\Livewire;
 
 /**
@@ -20,7 +21,7 @@ class GridServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'lematosdefuk');
 
         $this->publishes([
-                             __DIR__.'/../resources/views' => resource_path('views/vendor/lematosdefuk'),
+                             __DIR__ . '/../resources/views' => resource_path('views/vendor/lematosdefuk'),
                          ], 'lematosdefuk-views');
 
         Livewire::component('lematosdefuk::delete', Delete::class);
