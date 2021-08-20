@@ -1,4 +1,4 @@
-# Laravel Simple Grid [~Alpha~]
+# Laravel Simple Grid [~Alpha]
 
 Install livewire `https://laravel-livewire.com/docs/2.x/quickstart`
 
