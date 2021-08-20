@@ -3,7 +3,7 @@
 namespace LeMatosDeFuk;
 
 use Illuminate\Support\ServiceProvider;
-use LeMatosDeFuk\LaravelSimpleGrid\Notifications\Delete;
+use LeMatosDeFuk\Notifications\Delete;
 use Livewire\Livewire;
 
 /**

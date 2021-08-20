@@ -1,6 +1,6 @@
 <?php
 
-namespace LeMatosDeFuk\LaravelSimpleGrid\Notifications;
+namespace LeMatosDeFuk\Notifications;
 
 use Livewire\Component;
 
