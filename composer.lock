@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1628c0747ae36ccace1eb922331f77fe",
+    "content-hash": "28dcb89c2aee706781ca6ddf8efc6b91",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -695,12 +695,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/validation.git",
-                "reference": "6d4800765d737738318e715f77cf2863c08e4f40"
+                "reference": "243ed8aa5624c22897e126feb27c25b4c0cc2eb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/validation/zipball/6d4800765d737738318e715f77cf2863c08e4f40",
-                "reference": "6d4800765d737738318e715f77cf2863c08e4f40",
+                "url": "https://api.github.com/repos/illuminate/validation/zipball/243ed8aa5624c22897e126feb27c25b4c0cc2eb5",
+                "reference": "243ed8aa5624c22897e126feb27c25b4c0cc2eb5",
                 "shasum": ""
             },
             "require": {
@@ -746,7 +746,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-08-18T19:15:15+00:00"
+            "time": "2021-08-19T20:58:45+00:00"
         },
         {
             "name": "livewire/livewire",
@@ -3482,7 +3482,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.0.9"
+        "php": "^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
