@@ -17,7 +17,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "LeMatosDeFuk\\LaravelSimpleGrid\\GridServiceProvider"
+                "LeMatosDeFuk\\GridServiceProvider"
             ]
         }
     },
