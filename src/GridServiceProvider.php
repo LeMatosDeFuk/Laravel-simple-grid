@@ -1,6 +1,6 @@
 <?php
 
-namespace LeMatosDeFuk\LaravelSimpleGrid;
+namespace LeMatosDeFuk;
 
 use Illuminate\Support\ServiceProvider;
 use LeMatosDeFuk\LaravelSimpleGrid\Notifications\Delete;
