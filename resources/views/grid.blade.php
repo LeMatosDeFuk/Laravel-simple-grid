@@ -137,8 +137,14 @@
             let id = $(this).attr('id');
             let data = $(this).select2("val");
             let model = id.replace('-select', '');
-        @this.set(model, data);
+            @this.set(model, data);
         })
+
+        selectsInit()
+
+        Livewire.on('render-select', function () {
+                selectsInit()
+            }
+        )
     </script>
 @endpush
-
