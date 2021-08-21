@@ -18,10 +18,7 @@ This package support translations
 
 1. Create component inside App\Http\Livewire; with `php artisan make:livewire UserGrid`
 2. Extends component with `GridComponent` and implements `GridInterface`
-3. Specify grid columns as public properties and also put them into $queryString
-
-**Please, keep in mind you need to add sort_dir and sort_by to $queryStrig!!**
-
+3. Specify grid columns as public properties
 4. `render()` function should look like this:
    ```
    $grid = $this->createGrid();  
@@ -137,15 +134,6 @@ class UserGrid extends GridComponent implements GridInterface
     public $role;
     public $created_at;
 
-    protected $queryString = [
-        'model_id',
-        'name',
-        'role',
-        'created_at',
-        'sort_by',
-        'sort_dir'
-    ];
-
     public function render()
     {
         $grid = $this->createGrid();
@@ -211,21 +199,6 @@ class ProductGrid extends GridComponent implements GridInterface
     public $is_available;
     public $stocks;
     public $created_at;
-
-    protected $products;
-    protected $queryString = [
-        'model_id',
-        'brand_id',
-        'category_id',
-        'name',
-        'price',
-        'until_out_of_stocks',
-        'stocks',
-        'is_available',
-        'created_at',
-        'sort_by',
-        'sort_dir'
-    ];
 
     public function render()
     {
