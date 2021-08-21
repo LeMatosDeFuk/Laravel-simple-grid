@@ -98,8 +98,8 @@ So parameter $relationSort should contain 'role'.
      }
 ```
 
-So parameter $relationSort in category column should contain: 'category_name' and brand column should contain: '
-brand_name'
+So parameter $relationSort in category column should contain: `'category_name'` and brand column should
+contain: `'brand_name'`
 
 ### Date Input
 
@@ -278,8 +278,8 @@ class ProductGrid extends GridComponent implements GridInterface
                       ->join('categories', 'products.category_id', '=', 'categories.id')
                       ->join('brands', 'products.brand_id', '=', 'brands.id')
                       ->select(['products.*', 'categories.name as category_name', 'brands.name as brand_name'])
-                      ->when($this->model_id, fn($query, $value) => $query->where('id', 'like', '%' . $value . '%'))
-                      ->when($this->name, fn($query, $value) => $query->where('name', 'like', '%' . $value . '%'))
+                      ->when($this->model_id, fn($query, $value) => $query->where('products.id', 'like', '%' . $value . '%'))
+                      ->when($this->name, fn($query, $value) => $query->where('products.name', 'like', '%' . $value . '%'))
                       ->when($this->price, fn($query, $value) => $query->where('price', '<=', (float)$value))
                       ->when($this->stocks, fn($query, $value) => $query->where('stocks', '<=', (int)$value))
                       ->when($this->until_out_of_stocks, fn($query, $value) => $query->where('until_out_of_stocks', $value === 'true'))
@@ -291,3 +291,5 @@ class ProductGrid extends GridComponent implements GridInterface
 
 }
 ```
+
+**When joined table has same column names, don't forget to specify which column you want to chose in 'where' method.**
