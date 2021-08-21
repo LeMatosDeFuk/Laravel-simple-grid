@@ -1,5 +1,7 @@
 # Laravel Simple Grid [~Alpha]
 
+## !!! Documentation is not completed. Don't use this package yet. !!!
+
 Install livewire `https://laravel-livewire.com/docs/2.x/quickstart`
 
 Install package with `composer require lematosdefuk/laravel-simple-grid`
