@@ -148,16 +148,6 @@ class ProductGrid extends GridComponent implements GridInterface
         return $product->getBrandName();
     }
 
-    public function renderUntilOutOfStocks(Product $product): string
-    {
-        return $product->getUntilOutOfStocks(true);
-    }
-
-    public function renderIsAvailable(Product $product): string
-    {
-        return $product->getIsAvailable(true);
-    }
-
     public function renderDateCreated(Product $product): string
     {
         return $product->getDateCreated();
