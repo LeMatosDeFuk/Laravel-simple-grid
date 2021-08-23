@@ -178,7 +178,6 @@ class Grid
         string|null $name = null,
         array       $data = [],
         bool        $search = true,
-        string      $dataType = 'string',
         string      $operator = '=',
         bool        $isLazy = false,
     ): Column
@@ -193,7 +192,6 @@ class Grid
                                  'isLazy'   => $isLazy,
                                  'operator' => $operator,
                                  'type'     => 'select',
-                                 'dataType' => $dataType,
                                  'prefix'   => $this->getComponent()->getTable(),
                              ]);
 

@@ -62,7 +62,7 @@ class Column
 
     public function getColumnName()
     {
-        return $this->name === 'model_id' ? 'id' : $this->name;
+        return $this->name === 'id' ? 'id' : $this->name;
     }
 
 }

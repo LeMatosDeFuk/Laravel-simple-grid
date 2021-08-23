@@ -23,7 +23,7 @@ class GridComponent extends Component
 {
     use WithPagination;
 
-    public string $sort_by          = 'model_id';
+    public string $sort_by          = 'id';
     public string $sort_dir         = 'desc';
     public array  $filters          = [];
     public int    $forPage          = 25;
