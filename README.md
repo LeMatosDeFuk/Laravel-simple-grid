@@ -30,12 +30,6 @@ This package support translations
 
 ## Columns parameters
 
-******************************
-**!!!! IMPORTANT !!!!**
-
-Don't add column with `id` as column name. Livewire has `id` reserved for itself. Use `model_id` instead.
-******************************
-
 ### Normal Input
 
 `$grid->addColumn()`
@@ -59,7 +53,6 @@ Don't add column with `id` as column name. Livewire has `id` reserved for itself
      * @param string      $name - name of attribute from database
      * @param array       $data - to this argument you can pass data which are shown in select as options
      * @param bool        $search - specify, if you want search input or not
-     * @param string      $dataType - specify to which type convert value from url filter ('bool', 'int', 'float', 'string', ...)
      * @param string      $operator - operator in query ('like', '<=', '>=', ...)
      * @param bool        $isLazy - this argument is used mainly for datepicker, it specifies if wire.model is lazy or not
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -79,8 +72,7 @@ Don't add column with `id` as column name. Livewire has `id` reserved for itself
 
 **Here is an example of my ProductGrid**
 
-```
-<?php
+```<?php
 
 namespace App\Http\Livewire\DataManagement\Product;
 
@@ -107,12 +99,9 @@ class ProductGrid extends GridComponent implements GridInterface
     public function createGrid(): Grid
     {
         $grid = new Grid($this);
-        $grid->addColumn('ID', 'model_id');
+        $grid->addColumn('ID');
         $grid->addColumn('Name');
-        $grid->addColumn('Price')
-             ->setFilter(function (Builder $query, $value) {
-                 $query->where('price', '<=', (float)$value);
-             });
+        $grid->addColumn('Price', operator: '<=');
 
         $grid->addSelect('Brand', 'brand_id')
              ->setSortBy('brands.name')
@@ -126,13 +115,9 @@ class ProductGrid extends GridComponent implements GridInterface
              ->setRenderer([$this, 'renderCategory'])
              ->setFilter([$this, 'filterCategory']);
 
-        $grid->addColumn('Stocks', 'number_of_stocks', '<=', type: 'int');
-
-        $grid->addSelect('Until Sold Out', 'until_out_of_stocks', search: false)
-             ->setRenderer([$this, 'renderUntilOutOfStocks']);
-
-        $grid->addSelect('Available', 'is_available', search: false, dataType: 'bool')
-             ->setRenderer([$this, 'renderIsAvailable']);
+        $grid->addColumn('Stocks', 'number_of_stocks', '<=');
+        $grid->addSelect('Until Sold Out', 'until_out_of_stocks', search: false);
+        $grid->addSelect('Available', 'is_available', search: false);
 
         $grid->addColumnDate('Date Created', 'created_at')
              ->setRenderer([$this, 'renderDateCreated']);
@@ -187,5 +172,4 @@ class ProductGrid extends GridComponent implements GridInterface
     }
 
 }
-
 ```
