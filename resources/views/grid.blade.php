@@ -1,6 +1,4 @@
 <div>
-    @include('lematosdefuk::grid.grid-for-page')
-
     <div class="px-4">
         @include('lematosdefuk::notifications.notification', ['message' => __('Record has been deleted')])
     </div>
@@ -9,6 +7,7 @@
         <div class="col-12">
             <div class="card mb-4 mx-4">
                 <div class="card-header pb-0">
+                    @include('lematosdefuk::grid.grid-for-page')
                     <div class="d-flex flex-row justify-content-between">
                         @yield('grid-header')
                     </div>
@@ -25,7 +24,7 @@
                             </tr>
                             </thead>
                             <tbody>
-
+                            @include('lematosdefuk::grid.data-rows')
                             </tbody>
                         </table>
 
