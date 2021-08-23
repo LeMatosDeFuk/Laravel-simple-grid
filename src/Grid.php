@@ -93,7 +93,7 @@ class Grid
                     if ($operator === 'like') {
                         $query = $this->filterLike($query, $filterValue, $columnName);
                     } else {
-                        $query = $this->filterOther($query, $filterValue, $columnName, $column);
+                        $query = $this->filterOther($query, $filterValue, $columnName, $column, $operator);
                     }
                 }
             }
@@ -128,10 +128,10 @@ class Grid
         return $query;
     }
 
-    public function filterOther(Builder $query, $filterValue, $columnName, $column): Builder
+    public function filterOther(Builder $query, $filterValue, $columnName, $column, $operator): Builder
     {
         if ($filterValue !== "") {
-            $query = $query->where($columnName, $column->formatValue($filterValue));
+            $query = $query->where($columnName, $operator, $column->formatValue($filterValue));
         }
 
         return $query;
