@@ -8,6 +8,7 @@
             <div class="card mb-4 mx-4">
                 <div class="card-header pb-0">
                     @include('lematosdefuk::grid.grid-for-page')
+                    <hr>
                     <div class="d-flex flex-row justify-content-between">
                         @yield('grid-header')
                     </div>
