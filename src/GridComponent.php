@@ -25,16 +25,31 @@ class GridComponent extends Component
 
     public string $sort_by          = 'model_id';
     public string $sort_dir         = 'desc';
+    public array  $filters          = [];
     public int    $forPage          = 25;
     public bool   $showNotification = false;
-    protected     $listeners        = [
-        'showNotification' => 'showNotification'
-    ];
+    protected     $queryString      = ['filters', 'sort_by', 'sort_dir'];
+    protected     $listeners        = ['showNotification' => 'showNotification'];
+
+    public function getTable(): ?string
+    {
+        return $this->table ? $this->table : null;
+    }
 
     public function setSort($sortBy, $sortDir)
     {
         $this->sort_by  = $sortBy;
         $this->sort_dir = $sortDir;
+    }
+
+    public function getSortDir(): string
+    {
+        return $this->sort_dir;
+    }
+
+    public function getSortBy(): string
+    {
+        return $this->sort_by;
     }
 
     public function showNotification()
