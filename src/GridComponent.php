@@ -45,7 +45,7 @@ class GridComponent extends Component
 
     public function addMessage($message)
     {
-        $this->message = $message
+        $this->message = $message;
         $this->showNotification();
     }
 
