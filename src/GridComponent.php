@@ -23,23 +23,30 @@ class GridComponent extends Component
 {
     use WithPagination;
 
-    public string $sort_by          = 'id';
-    public string $sort_dir         = 'desc';
-    public array  $filters          = [];
-    public int    $forPage          = 25;
-    public bool   $showNotification = false;
-    protected     $queryString      = ['filters', 'sort_by', 'sort_dir'];
-    protected     $listeners        = ['showNotification' => 'showNotification'];
+    public string   $sort_by          = 'id';
+    public string   $sort_dir         = 'desc';
+    public array    $filters          = [];
+    public int      $forPage          = 25;
+    public bool     $showNotification = false;
+    public string   $message          = 'Record has been deleted';
+    protected array $queryString      = ['filters', 'sort_by', 'sort_dir'];
+    protected array $listeners        = ['showNotification' => 'showNotification'];
 
     public function getTable(): ?string
     {
-        return $this->table ? $this->table : null;
+        return $this->table ?: null;
     }
 
     public function setSort($sortBy, $sortDir)
     {
         $this->sort_by  = $sortBy;
         $this->sort_dir = $sortDir;
+    }
+
+    public function addMessage($message)
+    {
+        $this->message = $message;
+        $this->showNotification();
     }
 
     public function getSortDir(): string

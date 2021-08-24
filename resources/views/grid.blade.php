@@ -1,6 +1,6 @@
 <div>
     <div class="px-4">
-        @include('lematosdefuk::notifications.notification', ['message' => __('Record has been deleted')])
+        @include('lematosdefuk::notifications.notification')
     </div>
 
     <div class="row">
