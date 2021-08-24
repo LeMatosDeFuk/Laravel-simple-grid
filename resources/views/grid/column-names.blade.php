@@ -9,12 +9,12 @@
 
     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
         <a href="javascript:"
-           wire:click="setSort('{{ $columnName }}', '{{ $isActive && $oppositeDir }}')"
-            @class(['text-primary' => $sort_by === $columnName])
+           wire:click="setSort('{{ $columnName }}', '{{ $isActive ? $oppositeDir : 'desc' }}')"
+           @class(['text-primary' => $isActive])
         >
-            @lang($column->label)
+        @lang($column->label)
 
-            @include('lematosdefuk::grid.sort-icons')
+        @include('lematosdefuk::grid.sort-icons')
         </a>
     </th>
 
