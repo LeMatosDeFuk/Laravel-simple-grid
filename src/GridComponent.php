@@ -23,14 +23,14 @@ class GridComponent extends Component
 {
     use WithPagination;
 
-    public string   $sort_by          = 'id';
-    public string   $sort_dir         = 'desc';
-    public array    $filters          = [];
-    public int      $forPage          = 25;
-    public bool     $showNotification = false;
-    public string   $message          = 'Record has been deleted';
-    protected array $queryString      = ['filters', 'sort_by', 'sort_dir'];
-    protected array $listeners        = ['showNotification' => 'showNotification'];
+    public string $sort_by          = 'id';
+    public string $sort_dir         = 'desc';
+    public array  $filters          = [];
+    public int    $forPage          = 25;
+    public bool   $showNotification = false;
+    public string $message          = 'Record has been deleted';
+    protected     $queryString      = ['filters', 'sort_by', 'sort_dir'];
+    protected     $listeners        = ['showNotification' => 'showNotification'];
 
     public function getTable(): ?string
     {
@@ -45,8 +45,13 @@ class GridComponent extends Component
 
     public function addMessage($message)
     {
-        $this->message = $message;
+        $this->message = $message
         $this->showNotification();
+    }
+
+    public function showNotification()
+    {
+        $this->showNotification = true;
     }
 
     public function getSortDir(): string
@@ -57,11 +62,6 @@ class GridComponent extends Component
     public function getSortBy(): string
     {
         return $this->sort_by;
-    }
-
-    public function showNotification()
-    {
-        $this->showNotification = true;
     }
 
 }
